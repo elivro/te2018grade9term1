@@ -12,7 +12,7 @@ console.log(sibilings);
 console.log(birthDay);
 console.log(pets);
 console.log(feeling);
-console.log();
+console.log(phoneType);
 console.log(name);
 console.log(isUnderAged);
 console.log(isLiving);
