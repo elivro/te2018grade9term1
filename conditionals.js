@@ -7,9 +7,10 @@ const READLINE = require("readline-sync");
 console.log("*** Problem 1: R-rated ***");
 let age = READLINE.question("Enter your age: ");
 let withAdult = READLINE.question("Are you with an adult? (yes or no): ");
- if (age >= 18 || withAdult === true){
+ if (age >= 18 || withAdult == true ){
    console.log('You can watch an R-rated movie')
- } else{
+ }
+ else {
    console.log("You can't watch an R-rated movie" )
  }
 
@@ -23,7 +24,7 @@ let raining = READLINE.question("Is it raining? (yes or no): ");
 let thunderstorming = READLINE.question("Is it thunderstorming? (yes or no): ");
 if(raining === true){
   console.log('bring an umbrella')
-}  if (thunderstorming === true){
+}  if (thunderstorming == true){
   console.log("Don't bring an umbrella. That is bad luck.")
 } else if(raining && thunderstorming === false) {
  console.log("Have a nice day with this weather")
@@ -83,4 +84,4 @@ let myNum = 5;
 let guess = READLINE.question("I'm thinking of a number. Guess it: ");
 if(myNum === 5){
   console.log("You guessed the right number!")
-} else {console.log ("You are wrong.")}
+} else  {console.log ("You are wrong.")}
