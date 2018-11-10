@@ -20,7 +20,7 @@ if(stayAlive == "y" || stayAlive == "yes") {
   console.log("We should stay home. I'm sure the milita will come soon and evacuate us to somewhere safe.");
   console.log("Your friends agree to stay home and wait.");
 
-} else(stayAlive == "n" || stayAlive == "no") {
+} else if (stayAlive == "n" || stayAlive == "no") {
   player.courage++;
   console.log("oh, I know a secret bunker that was used during world war 2. We could probably hide there for a while. Quick grab everything you can. We're leaving in 5.");
   console.log("Everybody's in the car. You notice that various other people have left as well. You don't notice many cars on the street. You're neighboor sits outside on the his porch. He says the war started yesterday and most people left yesterday. ");
