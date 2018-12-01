@@ -79,4 +79,4 @@ if(enterHouse == "y" || enterHouse == "yes") {
     }
   }
 }
-console.log("Thanks for playing!");
+console.log("Thanks for playing!!");
