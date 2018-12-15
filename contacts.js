@@ -27,8 +27,8 @@ const READLINE = require("READLINE-sync");
   not (false).
 *******************************************************************************/
 
-let contacts; 
-let quit;
+let contacts;
+let quit  = false;
 
 /******************************************************************************
                                   printGreeting()
@@ -38,9 +38,9 @@ let quit;
 *******************************************************************************/
 
 function printGreeting() {
-
+  console.log('Welcome');
 }
-
+printGreeting();
 /******************************************************************************
                                   setupApp()
 
@@ -50,9 +50,24 @@ function printGreeting() {
 *******************************************************************************/
 
 function setup() {
+  contacts = []
+  let newContact = {}
+  let decisionAfter  = READLINE.question("1:Create a new contact"+" 2:Show all contacts"+" 3:Update a contact"+" 4:Quit")
+    if (decisionAfter == 1){
+      function getNameInput() {
+        newContact:name = READLINE.question("What is the new contacts name?");
+     if (newContact:
+       (name.length >= 1)) {
+    console.log("continue");
+    } else{
+          console.log("Please enter a proper name?")
+    }
 
-}
-
+      }
+      getNameInput();
+    }
+};
+setup();
 /******************************************************************************
                                 getNameInput()
 
@@ -61,11 +76,18 @@ function setup() {
 
   Valid names must be at least one character.
 *******************************************************************************/
-
-function getNameInput() {
-
-}
-
+// if (decisionAfter == 1){
+//   function getNameInput() {
+//     newContact:name = READLINE.question("What is the new contacts name?");
+//  if (newContact.name.length >= 1) {
+// console.log(continue)
+//} else{
+//       console.log("Please enter a proper name?")
+//}
+//
+//   }
+//   getNameInput();
+// }
 /******************************************************************************
                                 checkNumber()
 
@@ -79,9 +101,9 @@ function getNameInput() {
   number data types. From there you can perform all checks above.
 *******************************************************************************/
 
-function checkNumber(number) {
-
-}
+// function checkNumber(number) {
+//   newContact:phoneNumber = READLINE.question("What is "newContact.name+"phone number?"  );
+// }
 
 /******************************************************************************
                                 getNumberInput()
@@ -317,3 +339,4 @@ function run() {
 
 // Run the program!
 run();
+console.log("Goodbye");

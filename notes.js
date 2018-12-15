@@ -33,13 +33,18 @@
 // }
 // multiply2nums(2,4);
 //object, dog
-let dog = {};
-dog.color ='brown';
-dog.numlegs = 4;
-dog.breeds = 'golden retriever';
-dog.bark = function () {
-   return('roof roof!');
-}
-dog.bark();
-console.log(dog['color']);
+// let dog = {};
+// dog.color ='brown';
+// dog.numlegs = 4;
+// dog.breeds = 'golden retriever';
+// dog.bark = function () {
+//    return('roof roof!');
+// }
+// dog.bark();
+// console.log(dog['color']);
 //when function is on object it is a methods {};
+//Variables are strings
+// parameters are values that we plan for that will later be called for
+//argument repition
+//variables sequence
+//parameter is selection

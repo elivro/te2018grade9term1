@@ -1,7 +1,12 @@
 /******************************************************************************
 // Problem 1: print greeting ****
 // 1. Write a function that prints a greeting message to the user. Then call the function to see if it works.
+
+
+}
+
 /******************************************************************************
+
 // Problem 2: print a goodbye message ****
 // 2. Write a function that prints a goodbye message to the user. Then call the function to see if it works.
 /******************************************************************************

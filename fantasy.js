@@ -2,12 +2,12 @@
 const READLINE = require("readline-sync");
 
 // global variables
-let firstName;
-let lastName;
-let momMaidenName;
-let cityBorn;
-let dreamCar;
-let street;
+let firstName = 'Orvil';
+let lastName = 'Escalante';
+let momMaidenName = 'Garibo';
+let cityBorn = 'Denton';
+let dreamCar = 'Ferrari';
+let street = 'Foothill Blvd';
 let fantasyName;
 
 /******************************************************************************
@@ -17,10 +17,19 @@ let fantasyName;
   first 3 letters of their real first name and the first 2 letters of their
   real last name.
 *******************************************************************************/
+// firstName = READLINE.question("What is your first name?");
+// lastName = READLINE.question("What is your last name?");
+// momMaidenName = READLINE.question("What is your mom's maiden name?");
+// cityBorn = READLINE.question("What city were you born in?");
+// dreamCar = READLINE.question("What is your dream car?");
+// street = READLINE.question("What street did you live on?");
 
-function getNewFirstName() {
-
+function getNewFirstName(fName,lName) {
+  let first3ofFirst = fName.substring(0,3);
+  let last2ofLast = lName.substring(0,2);
+  return first3ofFirst + last2ofLast;
 }
+getNewFirstName(firstName,lastName)
 
 /******************************************************************************
                                   getNewLastName()
@@ -30,9 +39,13 @@ function getNewFirstName() {
   city where they were born.
 *******************************************************************************/
 
-function getNewLastName() {
+function getNewLastName(fname,lname) {
+  fname.substring(0,2);
+  lname.substring(0,3);
+  return fname+lname;
 
 }
+getNewLastName(momMaidenName, cityBorn)
 
 /******************************************************************************
                                   getTitle()
@@ -41,7 +54,7 @@ function getNewLastName() {
   letters of their real last name, reversed, and the model of their dream car.
 *******************************************************************************/
 
-function getTitle() {
+function getTitle(l3reversed,dcar) {
 
 }
 
