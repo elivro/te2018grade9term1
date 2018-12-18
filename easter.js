@@ -3,7 +3,7 @@ const READLINE = require("readline-sync");
 
 // Write your program below!
 // First line should get user input (year) and store it in variable y.
-let y = READLINE.question('What year is it? ')
+let y = READLINE.question('Enter a year? ')
 console.log(y)
 let a = y%19
 let b = Math.floor(y/100)

@@ -1,4 +1,4 @@
-// Example
+Example
 let message = "Hello World!"; let sibilings = 1;
 let birthDay = 12; let pets = 0; let feeling = "Happy";
 let phoneType = "Samsung";

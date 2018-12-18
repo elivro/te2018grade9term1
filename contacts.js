@@ -27,8 +27,8 @@ const READLINE = require("READLINE-sync");
   not (false).
 *******************************************************************************/
 
-let contacts;
-let quit  = false;
+let contacts ;
+let quit;
 
 /******************************************************************************
                                   printGreeting()
@@ -38,7 +38,7 @@ let quit  = false;
 *******************************************************************************/
 
 function printGreeting() {
-  console.log('Welcome');
+  console.log('Welcome to smart contacts 1.9!');
 }
 printGreeting();
 /******************************************************************************
@@ -50,24 +50,12 @@ printGreeting();
 *******************************************************************************/
 
 function setup() {
-  contacts = []
-  let newContact = {}
-  let decisionAfter  = READLINE.question("1:Create a new contact"+" 2:Show all contacts"+" 3:Update a contact"+" 4:Quit")
-    if (decisionAfter == 1){
-      function getNameInput() {
-        newContact:name = READLINE.question("What is the new contacts name?");
-     if (newContact:
-       (name.length >= 1)) {
-    console.log("continue");
-    } else{
-          console.log("Please enter a proper name?")
-    }
+  contacts = [];
+  quit = false;
 
-      }
-      getNameInput();
-    }
 };
 setup();
+
 /******************************************************************************
                                 getNameInput()
 
@@ -76,18 +64,19 @@ setup();
 
   Valid names must be at least one character.
 *******************************************************************************/
-// if (decisionAfter == 1){
-//   function getNameInput() {
-//     newContact:name = READLINE.question("What is the new contacts name?");
-//  if (newContact.name.length >= 1) {
-// console.log(continue)
-//} else{
-//       console.log("Please enter a proper name?")
-//}
-//
-//   }
-//   getNameInput();
-// }
+
+  function getNameInput() {
+    let contactName = READLINE.question("Enter a contact name.");
+    if(contactName.length < 1){
+       while (contactName.length < 1){
+         contactName = READLINE.question('Please enter a valid name.')
+       }
+       return contactName;
+    }
+
+
+}
+getNameInput();
 /******************************************************************************
                                 checkNumber()
 
@@ -101,10 +90,21 @@ setup();
   number data types. From there you can perform all checks above.
 *******************************************************************************/
 
-// function checkNumber(number) {
-//   newContact:phoneNumber = READLINE.question("What is "newContact.name+"phone number?"  );
-// }
+function checkNumber() {
+  let phoneNumber = READLINE.question("Enter contact phone number");
 
+    if(phoneNumber.length > 10|| phoneNumber.length < 10 ){
+      while (phoneNumber.length > 10 || phoneNumber.length < 10) {
+        console.log(phoneNumber = READLINE.question("Please enter a real phone number?"))
+      }
+      phoneNumber = parseInt(phoneNumber);
+    
+    return phoneNumber;
+    }
+
+
+}
+checkNumber();
 /******************************************************************************
                                 getNumberInput()
 
@@ -112,6 +112,9 @@ setup();
   then return it. Use checkNumber() to validate phone numbers.
 *******************************************************************************/
 function getNumberInput() {
+  if(phoneNumber.length === 10){
+    console.log("Phone number is valid")
+  }
 
 }
 
@@ -239,7 +242,7 @@ function removeContact() {
 *******************************************************************************/
 
 function displayUpdateMenu(contactIndex) {
-
+    let UpdateMenu  = READLINE.question("1)name 2)Phone number 3) Email Address 4)Notes 0) Return to the main menu")
 }
 
 /******************************************************************************
@@ -339,4 +342,3 @@ function run() {
 
 // Run the program!
 run();
-console.log("Goodbye");

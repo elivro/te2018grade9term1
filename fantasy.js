@@ -2,12 +2,12 @@
 const READLINE = require("readline-sync");
 
 // global variables
-let firstName = 'Orvil';
-let lastName = 'Escalante';
-let momMaidenName = 'Garibo';
-let cityBorn = 'Denton';
-let dreamCar = 'Ferrari';
-let street = 'Foothill Blvd';
+let firstName  = READLINE.question("What is your first name?");
+let lastName = READLINE.question("What is your last name?");
+let momMaidenName = READLINE.question("What is your mom's maiden name?");
+let cityBorn = READLINE.question("What city were you born in?");
+let dreamCar = READLINE.question("What is your dream car?");
+let street = READLINE.question("What is the name of the street you live in?");
 let fantasyName;
 
 /******************************************************************************
@@ -17,19 +17,14 @@ let fantasyName;
   first 3 letters of their real first name and the first 2 letters of their
   real last name.
 *******************************************************************************/
-// firstName = READLINE.question("What is your first name?");
-// lastName = READLINE.question("What is your last name?");
-// momMaidenName = READLINE.question("What is your mom's maiden name?");
-// cityBorn = READLINE.question("What city were you born in?");
-// dreamCar = READLINE.question("What is your dream car?");
-// street = READLINE.question("What street did you live on?");
+
 
 function getNewFirstName(fName,lName) {
   let first3ofFirst = fName.substring(0,3);
   let last2ofLast = lName.substring(0,2);
-  return first3ofFirst + last2ofLast;
+  console.log( first3ofFirst + last2ofLast);
 }
-getNewFirstName(firstName,lastName)
+;
 
 /******************************************************************************
                                   getNewLastName()
@@ -40,12 +35,12 @@ getNewFirstName(firstName,lastName)
 *******************************************************************************/
 
 function getNewLastName(fname,lname) {
-  fname.substring(0,2);
-  lname.substring(0,3);
-  return fname+lname;
+let newLast2 = fname.substring(0,2);
+let newlast3 = lname.substring(0,3);
+  console.log(newLast2+newlast3);
 
 }
-getNewLastName(momMaidenName, cityBorn)
+
 
 /******************************************************************************
                                   getTitle()
@@ -55,6 +50,10 @@ getNewLastName(momMaidenName, cityBorn)
 *******************************************************************************/
 
 function getTitle(l3reversed,dcar) {
+  let new1title = l3reversed.length;
+  let new3title = l3reversed.slice(-3);
+
+  console.log( new3title.charAt(2) + new3title.charAt(1) + new3title.charAt(0) + dreamCar );
 
 }
 
@@ -66,7 +65,7 @@ function getTitle(l3reversed,dcar) {
 *******************************************************************************/
 
 function getHonorific() {
-
+    console.log("of " + street);
 }
 
 /******************************************************************************
@@ -80,8 +79,15 @@ function getHonorific() {
 *******************************************************************************/
 
 function run() {
+  console.log(  "Generating new name.................................Loading ........" +
+                  " your new name is ")
 
+
+
+    fantasyName = getNewFirstName(firstName,lastName), getNewLastName(momMaidenName, cityBorn),  getTitle(lastName, dreamCar), getHonorific();
+    console.log( fantasyName);
 }
 
 // Run the program!
 run();
+console.log("")
