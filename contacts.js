@@ -76,7 +76,7 @@ setup();
 
 
 }
-getNameInput();
+
 /******************************************************************************
                                 checkNumber()
 
@@ -98,7 +98,7 @@ function checkNumber() {
         console.log(phoneNumber = READLINE.question("Please enter a real phone number?"))
       }
       phoneNumber = parseInt(phoneNumber);
-    
+
     return phoneNumber;
     }
 
@@ -336,8 +336,8 @@ function displayMainMenu() {
     4) Outside of the loop, print a goodbye message.
 *******************************************************************************/
 
-function run() {
-
+function run( {
+  
 }
 
 // Run the program!
